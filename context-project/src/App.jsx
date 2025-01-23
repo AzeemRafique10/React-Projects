@@ -1,9 +1,18 @@
+
+import Login from "./components/Login";
+import Profile from "./components/Profile";
+import UserContextprovider from "./context/UserContextprovider";
+
 const App = () => {
   return (
     <>
-      <h1 className="bg-slate-200 text-5xl text-center ">
-        Context API Project
-      </h1>
+      <UserContextprovider>
+        <h1 className="text-white text-5xl text-center">
+          Context API Project
+        </h1>
+        <Login />
+        <Profile />
+      </UserContextprovider>
     </>
   );
 };
